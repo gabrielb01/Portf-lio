@@ -13,6 +13,10 @@ body {
 }
 
 
+.row {
+    width: 100vw;
+}
+
 /* SETUP ---------------------------------------------------------------------------------------------------------- */
 
 
@@ -262,16 +266,23 @@ body {
 
 }
 
+.section-skills-text-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 
 .section-skills-text-content-card {
     position: relative;
-    width: 250px;
+    min-width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
     border-radius: 4px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .section-skills-text-content-card .percent {
@@ -335,6 +346,7 @@ body {
     stroke-width: 10;
     stroke-linecap: round;
     transform: translate(5px,5px);
+    stroke:rgba(233, 0, 0, 0.755);
 }
 
 .section-skills-text-content-card svg circle:nth-child(2) {
@@ -345,7 +357,37 @@ body {
 
 .section-skills-text-content-card:nth-child(1) svg circle:nth-child(2) {
     stroke-dashoffset: calc(440 - (440 * 97) /100);
-    stroke: #ff7b00;
+}
+
+.section-skills-text-content-card:nth-child(2) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 90) /100);
+}
+
+.section-skills-text-content-card:nth-child(3) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 88) /100);
+}
+
+.section-skills-text-content-card:nth-child(4) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 92) /100);
+}
+
+.section-skills-text-content-card:nth-child(5) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 87) /100);
+}
+
+.section-skills-text-content-card:nth-child(6) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 82) /100);
+}
+.section-skills-text-content-card:nth-child(7) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 91) /100);
+}
+
+.section-skills-text-content-card:nth-child(8) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 72) /100);
+}
+
+.section-skills-text-content-card:nth-child(9) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 65) /100);
 }
 
 
@@ -353,3 +395,93 @@ body {
 /* SECTION HABILIDADE ---------------------------------------------------------------------------------------------------------- */
 
 
+
+/* SECTION CONTATO ---------------------------------------------------------------------------------------------------------- */
+
+
+.section-contact-title {
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.section-contact-title h2 {
+    font-size: 56px;
+    padding: 0 20px;
+    
+}
+
+.section-contact-title h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: currentColor;
+    display: block;
+    margin: 0 auto;
+    margin-left: 55px;
+}
+
+.section-contact-text {
+    display: flex;
+    padding: 10px 80px;
+    flex-direction: row;
+}
+
+
+.section-contact-card {
+    max-width: 300px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+
+.section-contact-card i {
+    min-width: 120px;
+    height: 120px;
+    background-color: rgba(255, 0, 0, 0.646);
+    color: #fff;
+    font-size: 48px;
+    border-radius: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.section-contact-card .info {
+    margin-left: 20px;
+}
+
+
+/* SECTION CONTATO ---------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+@media (max-width: 900px) {
+    
+    .section-about-content, .section-skills-text-content {
+        flex-direction: column;
+    }
+
+  
+
+    .section-skills-text-content,.section-about-content {
+        margin: 0 auto;
+    }
+
+    .section-contact-text  {
+        flex-wrap: wrap;
+        height: 200px;
+        align-content: space-between;
+        margin-left: -50px;
+    }
+
+
+
+}
