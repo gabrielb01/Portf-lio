@@ -390,6 +390,10 @@ body {
     stroke-dashoffset: calc(440 - (440 * 65) /100);
 }
 
+.section-skills-text-content-card:nth-child(10) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 61) /100);
+}
+
 
 
 /* SECTION HABILIDADE ---------------------------------------------------------------------------------------------------------- */
