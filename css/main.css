@@ -479,13 +479,24 @@ body {
         margin: 0 auto;
     }
 
+    .section-about-content-right-flex {
+        margin-left: 21%;
+    }
+
+    .section-service-text {
+        flex-direction: column;
+    }
+
+
+
     .section-contact-text  {
         flex-wrap: wrap;
         height: 200px;
         align-content: space-between;
-        margin-left: -50px;
+
     }
 
 
 
 }
+
