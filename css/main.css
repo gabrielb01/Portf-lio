@@ -19,6 +19,33 @@ body {
     width: 100vw;
 }
 
+.top-document {
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(255, 0, 0, 0.646);
+    right: 20px;
+    bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 52px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.top-document i {
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+
+
 
 
 /* SETUP ---------------------------------------------------------------------------------------------------------- */
