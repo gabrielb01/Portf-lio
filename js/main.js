@@ -4,7 +4,10 @@ let doc = document.documentElement;
 window.onload = () => {
 
     document.querySelector('.top-document').addEventListener('click', () => {
-        doc.scrollTop = 0;
+        window.scroll({
+            top:0,
+            behavior: 'smooth'  
+        });
     });
 
 }
@@ -14,7 +17,7 @@ window.onload = () => {
 
 window.onscroll = () => {
 
-    
+
 
     if (doc.scrollTop > 200) {
         document.querySelector('.top-document').style.display = "inline-block";
