@@ -43,8 +43,8 @@
 
         <div class="section-about-content">
             <div class="section-about-content-left">
-                <p><b>Email:</b> gabrie_lb23@outlook.com</p>
-                <p><b>Github:</b><a href="https://github.com/gabrielb01" target="'blanck">https://github.com/gabrielb01</a></p>
+                <p><b>Email: </b> gabrie_lb23@outlook.com</p>
+                <p><b>Github: </b><a href="https://github.com/gabrielb01" target="_blanck">https://github.com/gabrielb01</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> Parnamirim / RN</p>
             </div>
             <div class="section-about-content-right">
@@ -121,7 +121,7 @@
                     <div class="percent">
                         <svg>
                             <circle cx="70" cy="70" r="70"></circle>
-                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"z></circle>
                             <div class="number">
                                 <h2>97<span>%</span></h2>
                             </div>
@@ -252,11 +252,16 @@
         <div class="section-contact-form-card">
             <form action="MAILTO:gabrie_lb23@outlook.com">
                 <div class="section-contact-form-card-flex">
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="Email">
+                    <label for="nome" class="nome">Nome</label>
+                    <input type="text" class="input-name" id="nome" autocomplete="off">
                 </div>
                 <div class="section-contact-form-card-flex">
-                    <textarea placeholder="Mensagem"></textarea>
+                    <label for="email" class="email">E-mail</label>
+                    <input type="text" class="input-email" id="email" autocomplete="off">
+                </div>
+                <div class="section-contact-form-card-flex">
+                    <label for="mensagem" class="mensagem">Mensagem</label>
+                    <textarea class="mensagem-text"></textarea>
                 </div>
                 <div class="section-contact-form-card-flex">
                     <input type="submit" value="Enviar">
@@ -291,6 +296,8 @@
         </div>
     </section>
 
+    <div class="margin-line"></div>
+    <div class="margin-line"></div>
     <div class="margin-line"></div>
     <div class="margin-line"></div>
 
