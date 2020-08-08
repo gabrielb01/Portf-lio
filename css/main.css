@@ -64,6 +64,7 @@ body {
     background-image: url('../img/bg-header.jpg');
     background-size: cover;
     height: 75vh;
+    /* border-bottom: 3px solid linear-gradient(red, blue); */
 }
 
 .header-info {
@@ -188,8 +189,13 @@ body {
     justify-content: center;
     align-items: center;
     margin: 15px;
+    cursor: pointer;
 }
 
+.section-about-content-right-circle:hover {
+    opacity: 0.9;
+    transition: 1;
+}
 
 /* SECTION ABOUT ---------------------------------------------------------------------------------------------------------- */
 
@@ -445,6 +451,8 @@ body {
     padding: 45px 0px;
     background-image: url("https://source.unsplash.com/random/1600x900/?code");
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 

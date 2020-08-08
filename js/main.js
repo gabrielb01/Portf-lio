@@ -3,7 +3,7 @@ let doc = document.documentElement;
 
 window.onload = () => {
 
-    let onFocusInput = (classFocus, classAlt) => {
+    const onFocusInput = (classFocus, classAlt) => {
         document.querySelector('.' + classFocus).addEventListener('focus', () => {
             let alt = document.querySelector('.' + classAlt);
             alt.style.marginTop = "-6px";
@@ -13,7 +13,7 @@ window.onload = () => {
         });
     }
 
-    let onBlurInput = (classFocus, classAlt) => {
+    const onBlurInput = (classFocus, classAlt) => {
         document.querySelector('.' + classFocus).addEventListener('blur', () => {
             if (document.querySelector('.' + classFocus).value == "") {
                 let alt = document.querySelector('.' + classAlt);
@@ -25,24 +25,23 @@ window.onload = () => {
         });
     }
 
-
-
-document.querySelector('.top-document').addEventListener('click', () => {
-    window.scroll({
-        top: 0,
-        behavior: 'smooth'
+    document.querySelector('.top-document').addEventListener('click', () => {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
-});
 
 
-onFocusInput('input-name', 'nome');
-onBlurInput('input-name', 'nome');
 
-onFocusInput('input-email', 'email');
-onBlurInput('input-email', 'email');
+    onFocusInput('input-name', 'nome');
+    onBlurInput('input-name', 'nome');
 
-onFocusInput('mensagem-text', 'mensagem');
-onBlurInput('mensagem-text', 'mensagem');
+    onFocusInput('input-email', 'email');
+    onBlurInput('input-email', 'email');
+
+    onFocusInput('mensagem-text', 'mensagem');
+    onBlurInput('mensagem-text', 'mensagem');
 
 
 
