@@ -64,7 +64,6 @@ body {
     background-image: url('../img/bg-header.jpg');
     background-size: cover;
     height: 75vh;
-    /* border-bottom: 3px solid linear-gradient(red, blue); */
 }
 
 .header-info {
@@ -189,7 +188,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 15px;
-    cursor: pointer;
 }
 
 .section-about-content-right-circle:hover {
@@ -590,17 +588,16 @@ body {
 /* FOOTER ---------------------------------------------------------------------------------------------------------- */
 
 .footer {
-    text-align: center;
-    background-color: rgb(190,190,190);
-    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #f3f3f3;
     font-family: tahoma;
     font-size: 22px;
-    height: 75px;
+    height: 80px;
 }
 
-.footer p {
-    padding: 25px 0;
-}
 
 
 /*FOOTER ---------------------------------------------------------------------------------------------------------- */
