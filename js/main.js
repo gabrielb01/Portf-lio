@@ -32,6 +32,10 @@ window.onload = () => {
         });
     });
 
+    document.querySelector('.section-blog-body-card').addEventListener('click', () => {
+        alert("Este post é um conteúdo estático");
+    });
+
 
 
     onFocusInput('input-name', 'nome');
