@@ -318,6 +318,12 @@ body {
     align-items: center;
 }
 
+.section-working-body-content i:hover {
+    box-shadow: 0 0 15px #fff;
+    transition: .5s;
+}
+
+
 /* SECTION TRABALHO ---------------------------------------------------------------------------------------------------------- */
 
 
