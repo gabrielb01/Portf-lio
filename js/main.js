@@ -32,11 +32,6 @@ window.onload = () => {
         });
     });
 
-    document.querySelector('.section-blog-body-card').addEventListener('click', () => {
-        alert("Este post é um conteúdo estático");
-    });
-
-
 
     onFocusInput('input-name', 'nome');
     onBlurInput('input-name', 'nome');
@@ -46,6 +41,19 @@ window.onload = () => {
 
     onFocusInput('mensagem-text', 'mensagem');
     onBlurInput('mensagem-text', 'mensagem');
+
+
+
+
+    let cards = document.querySelectorAll('.section-blog-body-card')
+
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener('click', () => {
+            alert("Este post é um conteúdo estático");
+        });
+    }
+
 
 
 
