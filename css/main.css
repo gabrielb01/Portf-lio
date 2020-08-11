@@ -846,30 +846,3 @@ body {
         font-size: 42px;
     }
 }
-
-/* @media (max-width: 500px) {
-
-    .section-working-body {
-        flex-direction: column;
-    }
-    
-    .section-working-body-content {
-        margin-top: 40px;
-    }
-
-    .section-working-body-content:nth-child(odd) {
-        display: flex;
-        flex-direction: column-reverse
-    }
-
-
-    .section-working-body-content i {
-        width: 180px;
-    }
-
-    .section-working-title h2 {
-        font-size: 40px;
-    }
-  
-}
- */
