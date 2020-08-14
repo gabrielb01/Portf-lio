@@ -328,12 +328,137 @@ body {
 
 
 
+/* SECTION PREÇOS ---------------------------------------------------------------------------------------------------------- */
+
+
+.section-precing {
+    width: 100vw;
+    padding: 25px 0;
+}
+
+.section-precing-title  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.section-precing-title h2 {
+    font-size: 4em;
+}
+
+.section-precing-title h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background: currentColor;
+    display: block;
+    margin: 0 auto;
+    margin-left: 55px;
+}
+
+.section-precing-body {
+    padding: 0 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-precing-body-card {
+    background-color: #fff;
+    width: 250px;
+    margin: 20px;
+}
+
+
+.section-precing-body-card-header {
+    background-color: rgba(255, 68, 0, 0.769);
+    color:#fff;
+    text-align: center;
+    padding: 15px 0 70px;
+}
+
+
+
+.section-precing-body-card-content-circle {
+    background-color: #fff;
+    border: 5px solid #f5f5f5;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: -70px auto;
+}
+
+.section-precing-body-card-content-circle b {
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+.section-precing-body-card-content-circle b span:nth-child(odd) {
+    font-size: 18px;
+}
+
+.section-precing-body-card-content-circle b span:nth-child(even) {
+    position: relative;
+    top: 3px;
+}
+
+.section-precing-body-card-content-circle p {
+    color: rgb(123,123,123);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.section-precing-body-card-content-list {
+    margin-top: 100px;
+    text-align: center;
+    padding: 0 25px;
+}
+
+.section-precing-body-card-content-list ul {
+    padding:0
+}
+
+.section-precing-body-card-content-list li {
+    list-style: none;
+    border-bottom: 3px solid #f7f7f7;
+    padding: 10px 0;
+}
+
+
+.section-precing-body-card-content-footer {
+    margin-top: 20px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+
+.section-precing-body-card-content-footer a {
+    background-color: rgba(255, 68, 0, 0.769);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 7%;
+}
+
+/* SECTION PREÇOS ---------------------------------------------------------------------------------------------------------- */
+
+
+
+
 /* SECTION BLOG ---------------------------------------------------------------------------------------------------------- */
 
 
 .section-blog {
     width: 100vw;
-    background-color: #fff
+    height: 700px;
+    background-color: #fff;
 }
 
 .section-blog-title {
@@ -353,7 +478,7 @@ body {
     background: currentColor;
     display: block;
     margin: 0 auto;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .section-blog-body {
@@ -366,10 +491,18 @@ body {
 .section-blog-body-card {
     border: 0.6px solid #f2f2f2;
     max-width: 300px;
+    max-height: 350px;
     padding:10px;
     margin: 10px 30px;
     cursor: pointer;
 }
+.section-blog-body-card:hover {
+    transition: 1s;
+    position: relative;
+    margin-top: -5px;
+    box-shadow: 0px 3px 5px #000;
+}
+
 
 .section-blog-body-card-img {
     background-image: url("https://source.unsplash.com/random/1600x900/?nature");
