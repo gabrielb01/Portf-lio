@@ -211,6 +211,7 @@ body {
 
 .section-service {
     background-color: #fff;
+    padding-bottom: 80px;
 }
 
 .section-service-title {
@@ -471,7 +472,6 @@ body {
 
 .section-blog {
     width: 100vw;
-    height: 700px;
     background-color: #fff;
 }
 
