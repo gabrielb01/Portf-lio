@@ -25,6 +25,22 @@ window.onload = () => {
         });
     }
 
+
+    const msgDocumentAnimate = () => {
+
+        setInterval(() => {
+            setTimeout(() => {
+                document.querySelector('.msg-content').style.transform = "rotate(-8deg)";
+                setTimeout(() => {
+                    document.querySelector('.msg-content').style.transform = "rotate(8deg)";
+                    setTimeout(() => {
+                        document.querySelector('.msg-content').style.transform = "rotate(0deg)";
+                    }, 250);
+                }, 250);
+            }, 250);
+        }, 2000);
+    }
+
     document.querySelector('.top-document').addEventListener('click', () => {
         window.scroll({
             top: 0,
@@ -41,6 +57,8 @@ window.onload = () => {
 
     onFocusInput('mensagem-text', 'mensagem');
     onBlurInput('mensagem-text', 'mensagem');
+
+    msgDocumentAnimate();
 
 
 

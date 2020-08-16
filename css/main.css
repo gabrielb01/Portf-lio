@@ -59,6 +59,8 @@ body {
     border: 3px solid #f9f9f9;
     padding:20px 30px;
     box-shadow: 2px 3px 10px #333;
+    transition: .5s;
+    /* transform: rotate(-20deg); */
 }
 
 
