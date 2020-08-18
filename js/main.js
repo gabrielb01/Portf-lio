@@ -72,7 +72,7 @@ window.onload = () => {
         });
     }
 
-
+    document.getElementsByTagName('body')[0].style.overflowY = "visible";
 
 
 }

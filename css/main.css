@@ -3,7 +3,7 @@
 body {
     padding: 0;
     margin: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #fafafa;
     font-family: tahoma;
 }
@@ -45,13 +45,15 @@ body {
     margin-left: 4px;
 }
 
-
-
-.msg-content {
+.msg {
     position: fixed;
     z-index: 99999;
     bottom: 30px;
     left: 30px;
+}
+
+
+.msg-content {
     background-color: orangered;
     color: #fff;
     font-weight: bold;
@@ -60,9 +62,34 @@ body {
     padding:20px 30px;
     box-shadow: 2px 3px 10px #333;
     transition: .5s;
-    /* transform: rotate(-20deg); */
 }
 
+
+.msg-tree {
+    width:150px;
+    height: 25px;
+    background-color: #a94b00;
+    transform: rotate(90deg);
+    position: relative;
+    z-index: -1;
+    margin-left: 15px;
+    box-shadow: 1px 2px 5px #000;
+}
+
+
+.msg-tree hr {
+    height: 2px;
+    background-color: #bc5e00;
+    border: none;
+}
+
+.msg-tree hr:nth-child(even) {
+    margin-right: 50px;
+}
+
+.msg-tree hr:nth-child(odd) {
+    margin-left: 70px;
+}
 
 
 /* SETUP ---------------------------------------------------------------------------------------------------------- */
