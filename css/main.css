@@ -23,7 +23,7 @@ body {
 .top-document {
     position: fixed;
     z-index: 999;
-    background-color: rgba(255, 0, 0, 0.646);
+    background-color: orangered;
     right: 20px;
     bottom: 20px;
     width: 60px;
@@ -83,6 +83,7 @@ body {
     border: none;
 }
 
+
 .msg-tree hr:nth-child(even) {
     margin-right: 50px;
 }
@@ -90,6 +91,9 @@ body {
 .msg-tree hr:nth-child(odd) {
     margin-left: 70px;
 }
+
+
+
 
 
 /* SETUP ---------------------------------------------------------------------------------------------------------- */
@@ -107,6 +111,7 @@ body {
     background-image: url('../img/bg-header.jpg');
     background-size: cover;
     height: 75vh;
+    box-shadow: 0 3px 18px #333;
 }
 
 .header-info {
@@ -132,6 +137,15 @@ body {
 
 .header-info h3 {
     color: #fff;
+}
+
+
+.header-info-text p {
+    font-size: 20px;
+    color: #fff;
+    font-family: tahoma;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .header-avatar {
@@ -214,22 +228,56 @@ body {
 }
 
 .section-about-content-right-circle {
-    background-color: #333;
-    color: #fff;
+    position: relative;
     font-size: 40px;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    margin: 15px;
+
+}
+
+.flip-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+}
+
+
+.flip-card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px;
 }
 
-.section-about-content-right-circle:hover {
-    opacity: 0.9;
-    transition: 1;
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    background-color: #333;
+    color: #fff;
 }
+
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    background-color: orangered;
+    color: #fff;
+    transform: rotateY(180deg);
+    font-size: 28px;
+}
+
 
 /* SECTION ABOUT ---------------------------------------------------------------------------------------------------------- */
 
@@ -296,7 +344,7 @@ body {
 }
 
 .section-service-text-left-card i, .section-service-text-right-card i {
-    background-color: rgba(255, 0, 0, 0.646);
+    background-color: orangered;
     color: #fff;
     font-size: 48px;
     min-width: 120px;
@@ -857,7 +905,7 @@ body {
 .section-contact-card i {
     min-width: 120px;
     height: 120px;
-    background-color: rgba(255, 0, 0, 0.646);
+    background-color: orangered;
     color: #fff;
     font-size: 48px;
     border-radius: 8%;
