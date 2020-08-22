@@ -764,7 +764,8 @@ body {
 
 
 .section-skills-text-content-card:nth-child(1) svg circle:nth-child(2) {
-    stroke-dashoffset: ;
+    animation: 20s;
+    stroke-dashoffset: 0;
 }
 
 .section-skills-text-content-card:nth-child(2) svg circle:nth-child(2) {
@@ -812,13 +813,15 @@ body {
 
 .section-contact-form {
     width: 100vw;
-    padding: 45px 0px;
     background-image: url("https://source.unsplash.com/random/1600x900/?code");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
 }
 
+.section-contact-form svg {
+    display: block;
+}
 
 
 .contact-form-title {

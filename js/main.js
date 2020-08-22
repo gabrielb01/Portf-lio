@@ -76,6 +76,8 @@ window.onload = () => {
 
     document.getElementsByTagName('body')[0].style.overflowY = "visible";
 
+    document.getElementById("skill1").style.strokeDashoffset = "calc(440 - (440 *75) /100)";
+
 
 }
 
