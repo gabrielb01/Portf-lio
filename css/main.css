@@ -73,6 +73,7 @@ body {
     position: relative;
     z-index: -1;
     margin-left: 15px;
+    padding-bottom: 7px;
     box-shadow: 1px 2px 5px #000;
 }
 
@@ -90,6 +91,15 @@ body {
 
 .msg-tree hr:nth-child(odd) {
     margin-left: 70px;
+}
+
+
+.msg-tree hr:nth-child(1) {
+    height: 5px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #a94b00;
+    border: 1.5px solid #bc5e00;
 }
 
 
@@ -316,6 +326,8 @@ body {
 .section-service-text {
     display: flex;
     padding: 10px 80px;
+    font-family: tahoma;
+    opacity: 0.9;
 }
 
 .section-service-text-left {
@@ -353,7 +365,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 15px;   
+    margin: 15px;  
+}
+
+.section-service-text-left-card i:hover, .section-service-text-right-card i:hover, .section-contact-card i:hover {
+    animation: maxxMin .5s;
 }
 
 
@@ -460,6 +476,16 @@ body {
     background-color: #fff;
     width: 250px;
     margin: 20px;
+}
+
+.section-precing-body-card:nth-child(2) {
+    box-shadow: 0px 8px 10px #000;
+}
+
+.section-precing-body-card:nth-child(4) p {
+    padding:96px 0;
+    font-size:18px;
+    text-align: center;
 }
 
 
@@ -882,6 +908,9 @@ body {
 
 
 
+
+
+
 /* SECTION CONTATO ---------------------------------------------------------------------------------------------------------- */
 
 
@@ -1068,5 +1097,17 @@ body {
 
     .section-working-body-content h2 {
         font-size: 42px;
+    }
+}
+
+
+
+@keyframes maxxMin {
+    50% {
+        font-size: 56px;
+    }
+
+    100% {
+        font-size: 48px;
     }
 }

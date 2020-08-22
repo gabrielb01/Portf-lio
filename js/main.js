@@ -41,6 +41,8 @@ window.onload = () => {
         }, 2000);
     }
 
+
+
     document.querySelector('.top-document').addEventListener('click', () => {
         window.scroll({
             top: 0,
