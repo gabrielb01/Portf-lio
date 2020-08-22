@@ -819,6 +819,12 @@ body {
     background-position: center;
 }
 
+.section-contant-form-bg {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 255, 0.388);
+}
+
 .section-contact-form svg {
     display: block;
 }
