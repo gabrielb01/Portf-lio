@@ -47,11 +47,11 @@ window.onload = () => {
 
     const setSkills = () => {
         for(let i=0;i<arraySkills.length;i++) {
-            document.getElementById("skill"+(i+1)).style.strokeDashoffset = "calc(440 - (440 *"+arraySkills[i]+") /100)";
             for(let j=0;j<arraySkills[i]+1;j++) {
                 setTimeout(()=> {
                     document.getElementById("percent-value"+(i+1)).innerHTML = j;
-                }, (2000/arraySkills[i]) * (j/1.1) );
+                    document.getElementById("skill"+(i+1)).style.strokeDashoffset = `calc(440 - (440 *${j}) /100)`;
+                }, (2000/arraySkills[i]) * j );
             }
         }
     }
@@ -72,7 +72,6 @@ window.onload = () => {
         } else {
             document.querySelector('.top-document').style.display = "none";
         }
-        console.log(doc.scrollTop +" - "+document.querySelector('.section-skills').offsetTop);
     
         if ((doc.scrollTop+250) >=document.querySelector('.section-skills').offsetTop && display ==0) {
             display = 1;
