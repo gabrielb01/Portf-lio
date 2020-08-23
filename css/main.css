@@ -754,53 +754,17 @@ body {
     stroke-width: 10;
     stroke-linecap: round;
     transform: translate(5px,5px);
-    stroke:rgba(233, 0, 0, 0.755);
+    stroke:rgba(123, 123, 123, 0.5);
 }
 
 .section-skills-text-content-card svg circle:nth-child(2) {
     stroke-dashoffset: 440;
     stroke-dasharray: 440;
+    stroke:rgba(233, 0, 0, 0.755);
+    transition: 2s;
 }
 
 
-.section-skills-text-content-card:nth-child(1) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 97) /100);
-}
-
-.section-skills-text-content-card:nth-child(2) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 90) /100);
-}
-
-.section-skills-text-content-card:nth-child(3) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 88) /100);
-}
-
-.section-skills-text-content-card:nth-child(4) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 92) /100);
-}
-
-.section-skills-text-content-card:nth-child(5) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 87) /100);
-}
-
-.section-skills-text-content-card:nth-child(6) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 82) /100);
-}
-.section-skills-text-content-card:nth-child(7) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 91) /100);
-}
-
-.section-skills-text-content-card:nth-child(8) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 72) /100);
-}
-
-.section-skills-text-content-card:nth-child(9) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 65) /100);
-}
-
-.section-skills-text-content-card:nth-child(10) svg circle:nth-child(2) {
-    stroke-dashoffset: calc(440 - (440 * 61) /100);
-}
 
 
 

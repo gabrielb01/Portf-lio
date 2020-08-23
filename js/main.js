@@ -1,4 +1,7 @@
 let doc = document.documentElement;
+let display = 0;
+let arraySkills = [97,90,88,92,87,82,91,72,65,61];
+
 
 
 window.onload = () => {
@@ -42,6 +45,18 @@ window.onload = () => {
     }
 
 
+    const setSkills = () => {
+        for(let i=0;i<arraySkills.length;i++) {
+            document.getElementById("skill"+(i+1)).style.strokeDashoffset = "calc(440 - (440 *"+arraySkills[i]+") /100)";
+            for(let j=0;j<arraySkills[i]+1;j++) {
+                setTimeout(()=> {
+                    document.getElementById("percent-value"+(i+1)).innerHTML = j;
+                }, (2000/arraySkills[i]) * (j/1.1) );
+            }
+        }
+    }
+
+
 
     document.querySelector('.top-document').addEventListener('click', () => {
         window.scroll({
@@ -49,6 +64,22 @@ window.onload = () => {
             behavior: 'smooth'
         });
     });
+
+    window.onscroll = () => {
+
+        if (doc.scrollTop > 200) {
+            document.querySelector('.top-document').style.display = "inline-block";
+        } else {
+            document.querySelector('.top-document').style.display = "none";
+        }
+        console.log(doc.scrollTop +" - "+document.querySelector('.section-skills').offsetTop);
+    
+        if ((doc.scrollTop+250) >=document.querySelector('.section-skills').offsetTop && display ==0) {
+            display = 1;
+            setSkills();
+        }
+    
+    }
 
 
     onFocusInput('input-name', 'nome');
@@ -76,22 +107,7 @@ window.onload = () => {
 
     document.getElementsByTagName('body')[0].style.overflowY = "visible";
 
-    document.getElementById("skill1").style.strokeDashoffset = "calc(440 - (440 *75) /100)";
-
-
-}
-
-
-
-
-window.onscroll = () => {
-
-
-
-    if (doc.scrollTop > 200) {
-        document.querySelector('.top-document').style.display = "inline-block";
-    } else {
-        document.querySelector('.top-document').style.display = "none";
-    }
+  
 
 }
+
