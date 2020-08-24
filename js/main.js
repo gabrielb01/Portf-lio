@@ -1,6 +1,23 @@
 let doc = document.documentElement;
 let display = 0;
-let arraySkills = [97,90,88,92,87,82,91,72,65,61];
+let arraySkills = [97, 90, 88, 92, 87, 82, 91, 72, 65, 61];
+let indexFrase =0;
+let arrayFrases = [
+    '“Use linux”',
+    '“Linux não tem photoshop”',
+    '“Ubuntu é o windows dos linux”',
+    '“7 bugs ou mais todos os dias”'
+];
+
+
+let opcoes = {
+    classname: "topbar",
+    id: "topbar"
+};
+
+let nanobar = new Nanobar(opcoes);
+nanobar.go(80);
+
 
 
 
@@ -11,7 +28,7 @@ window.onload = () => {
             let alt = document.querySelector('.' + classAlt);
             alt.style.marginTop = "-6px";
             alt.style.backgroundColor = "#fff";
-            alt.style.color = "#666";
+            alt.style.color = "#667";
             alt.style.fontSize = "14px";
         });
     }
@@ -46,12 +63,12 @@ window.onload = () => {
 
 
     const setSkills = () => {
-        for(let i=0;i<arraySkills.length;i++) {
-            for(let j=0;j<arraySkills[i]+1;j++) {
-                setTimeout(()=> {
-                    document.getElementById("percent-value"+(i+1)).innerHTML = j;
-                    document.getElementById("skill"+(i+1)).style.strokeDashoffset = `calc(440 - (440 *${j}) /100)`;
-                }, (2000/arraySkills[i]) * j );
+        for (let i = 0; i < arraySkills.length; i++) {
+            for (let j = 0; j < arraySkills[i] + 1; j++) {
+                setTimeout(() => {
+                    document.getElementById("percent-value" + (i + 1)).innerHTML = j;
+                    document.getElementById("skill" + (i + 1)).style.strokeDashoffset = `calc(440 - (440 *${j}) /100)`;
+                }, (2000 / arraySkills[i]) * j);
             }
         }
     }
@@ -72,12 +89,12 @@ window.onload = () => {
         } else {
             document.querySelector('.top-document').style.display = "none";
         }
-    
-        if ((doc.scrollTop+250) >=document.querySelector('.section-skills').offsetTop && display ==0) {
+
+        if ((doc.scrollTop + 250) >= document.querySelector('.section-skills').offsetTop && display == 0) {
             display = 1;
             setSkills();
         }
-    
+
     }
 
 
@@ -93,9 +110,16 @@ window.onload = () => {
     msgDocumentAnimate();
 
 
+    setInterval(() => {
+        if (indexFrase==4) {
+            indexFrase =0;
+        }
+        document.querySelector(".header-info-text").innerHTML = `<p>${arrayFrases[indexFrase]}</p>`;
+        indexFrase++
+    },6000);
 
 
-    let cards = document.querySelectorAll('.section-blog-body-card')
+    let cards = document.querySelectorAll('.section-blog-body-card');
 
 
     for (let i = 0; i < cards.length; i++) {
@@ -104,9 +128,10 @@ window.onload = () => {
         });
     }
 
+    document.querySelector(".topbar").style.display = "none";
     document.getElementsByTagName('body')[0].style.overflowY = "visible";
 
-  
+
 
 }
 
