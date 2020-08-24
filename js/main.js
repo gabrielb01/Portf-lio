@@ -1,13 +1,6 @@
 let doc = document.documentElement;
 let display = 0;
 let arraySkills = [97, 90, 88, 92, 87, 82, 91, 72, 65, 61];
-let indexFrase =0;
-let arrayFrases = [
-    '“Use linux”',
-    '“Linux não tem photoshop”',
-    '“Ubuntu é o windows dos linux”',
-    '“7 bugs ou mais todos os dias”'
-];
 
 
 let opcoes = {
@@ -108,15 +101,6 @@ window.onload = () => {
     onBlurInput('mensagem-text', 'mensagem');
 
     msgDocumentAnimate();
-
-
-    setInterval(() => {
-        if (indexFrase==4) {
-            indexFrase =0;
-        }
-        document.querySelector(".header-info-text").innerHTML = `<p>${arrayFrases[indexFrase]}</p>`;
-        indexFrase++
-    },6000);
 
 
     let cards = document.querySelectorAll('.section-blog-body-card');
