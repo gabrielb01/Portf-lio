@@ -55,6 +55,21 @@ window.onload = () => {
     }
 
 
+    const point = () => {
+        setInterval(() => {
+            let p = ".";
+            document.querySelector(".point").innerHTML = p;
+            setTimeout(() => {
+                p+=".";
+                document.querySelector(".point").innerHTML = p;
+                setTimeout(() => {
+                    p+=".";
+                    document.querySelector(".point").innerHTML = p;
+                }, 1000);
+            }, 1000);
+        },3000);
+    }
+
     const setSkills = () => {
         for (let i = 0; i < arraySkills.length; i++) {
             for (let j = 0; j < arraySkills[i] + 1; j++) {
@@ -101,6 +116,7 @@ window.onload = () => {
     onBlurInput('mensagem-text', 'mensagem');
 
     msgDocumentAnimate();
+    point();
 
 
     let cards = document.querySelectorAll('.section-blog-body-card');

@@ -16,7 +16,7 @@ body {
 
 
 .topbar {
-    background-color:orangered;
+    background-color:rgba(177, 177, 177, 0.578);
 }
 
 
@@ -221,7 +221,7 @@ body {
 
 .section-about-text p {
     text-align: left;
-    font-size: 18px;
+    font-size: 40px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #333;
 }
@@ -229,6 +229,7 @@ body {
 .section-about-text p:nth-child(even) {
     opacity: .7;
 }
+
 
 .section-about-content {
     display: flex;
