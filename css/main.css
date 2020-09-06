@@ -46,6 +46,12 @@ body {
     font-size: 52px;
     cursor: pointer;
     display: none;
+    opacity: .6;
+}
+
+.top-document:hover {
+    transition: 0.5s;
+    opacity: 1;
 }
 
 
