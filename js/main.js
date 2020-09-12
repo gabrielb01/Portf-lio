@@ -90,6 +90,14 @@ window.onload = () => {
         });
     });
 
+
+    document.querySelector(".fa-angle-double-down").addEventListener('click', () => {
+        window.scroll({
+            top:  document.querySelector(".section-about").offsetTop,
+            behavior:'smooth'
+        });
+    });
+
     window.onscroll = () => {
 
         if (doc.scrollTop > 200) {
@@ -101,6 +109,12 @@ window.onload = () => {
         if ((doc.scrollTop + 250) >= document.querySelector('.section-skills').offsetTop && display == 0) {
             display = 1;
             setSkills();
+        }
+
+        if (doc.scrollTop >= document.querySelector('.section-about').offsetTop) {
+            document.querySelector(".fa-angle-double-down").style.display = "none";
+        } else {
+            document.querySelector(".fa-angle-double-down").style.display = "block";
         }
 
     }
