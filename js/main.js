@@ -55,19 +55,22 @@ window.onload = () => {
     }
 
 
+
+
+
     const point = () => {
         setInterval(() => {
             let p = ".";
             document.querySelector(".point").innerHTML = p;
             setTimeout(() => {
-                p+=".";
+                p += ".";
                 document.querySelector(".point").innerHTML = p;
                 setTimeout(() => {
-                    p+=".";
+                    p += ".";
                     document.querySelector(".point").innerHTML = p;
                 }, 1000);
             }, 1000);
-        },3000);
+        }, 3000);
     }
 
     const setSkills = () => {
@@ -91,13 +94,6 @@ window.onload = () => {
     });
 
 
-    document.querySelector(".fa-angle-double-down").addEventListener('click', () => {
-        window.scroll({
-            top:  document.querySelector(".section-about").offsetTop,
-            behavior:'smooth'
-        });
-    });
-
     window.onscroll = () => {
 
         if (doc.scrollTop > 200) {
@@ -111,11 +107,6 @@ window.onload = () => {
             setSkills();
         }
 
-        if (doc.scrollTop >= document.querySelector('.section-about').offsetTop) {
-            document.querySelector(".fa-angle-double-down").style.display = "none";
-        } else {
-            document.querySelector(".fa-angle-double-down").style.display = "block";
-        }
 
     }
 
