@@ -1,3 +1,4 @@
+
 let doc = document.documentElement;
 let display = 0;
 let arraySkills = [97, 90, 88, 92, 87, 82, 91, 72, 65, 61];
@@ -15,6 +16,7 @@ nanobar.go(80);
 
 
 window.onload = () => {
+
 
     const onFocusInput = (classFocus, classAlt) => {
         document.querySelector('.' + classFocus).addEventListener('focus', () => {
@@ -135,8 +137,6 @@ window.onload = () => {
 
     document.querySelector(".topbar").style.display = "none";
     document.getElementsByTagName('body')[0].style.overflowY = "visible";
-
-
 
 }
 
