@@ -160,6 +160,68 @@ body {
     height: 75vh;
 }
 
+.bg-header-nav {
+    position: fixed;
+    z-index: 9999;
+    padding: 20px 40px;
+    width: calc(100vw - 80px);
+    font-family: tahoma;
+    font-weight: 67%;
+    font-size: 16px;
+    background-color:#fff;
+    border-bottom: 2px solid rgba(41, 41, 211, 0.788);
+    transition: height .1s ease-out;
+    overflow: hidden;
+    top:0;
+}
+
+.bg-header-nav img {
+    width: 50px;
+    height: 50px;
+    margin-top: -15px;
+    cursor: pointer;
+    position: absolute;
+
+}
+
+.bg-header-nav .cls, .header .fa-bars {
+    display: none;
+}
+
+.header .bars-nav {
+    font-size: 25px;
+    position: fixed;
+    z-index: 99;
+    top:20px;
+    right: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+
+.bg-header-nav ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+    margin-right: 35px;
+}
+
+
+
+.bg-header-nav ul li {
+    float: left;
+    list-style: none; 
+    padding: 0 10px;
+    cursor: pointer;
+    color:#333;
+    transition: .2s;
+}
+
+.bg-header-nav ul li:hover {
+    opacity: .8;
+    color: orangered;
+}
+
 .header-info {
     display: flex;
     flex-direction: column;
@@ -187,13 +249,7 @@ body {
 }
 
 
-.header-info-text p {
-    font-size: 20px;
-    color: #fff;
-    font-family: tahoma;
-    font-style: italic;
-    font-weight: bold;
-}
+
 
 .header-avatar {
     position: relative;
@@ -882,7 +938,7 @@ body {
 .section-contact-form-card {
     height: 500px;
     margin:35px auto;
-    padding: 35px 0;
+    padding: 35px;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -1078,9 +1134,60 @@ body {
 
 
 @media (max-width: 782px) {
+
+   .bg-header-nav {
+        padding: 0;
+        width: 100vw;
+   }
+
+   .bg-header-nav .cls {
+       display: block;
+       font-size: 38px;
+       position: absolute;
+       right: 20px;
+       cursor: pointer;
+       color: #333;
+   }
+
+   .header .fa-bars {
+       display: block;
+   }
+
+   .bg-header-nav img {
+       display: none;
+   }
+
+   .bg-header-nav ul {
+       width: 100%;
+       margin: 40px 0 8px 0;
+   }
+
+   .bg-header-nav ul li {
+       padding: 18px 0;
+       font-size: 25px;
+   }
+
+   .bg-header-nav ul li:hover {
+       background-color: #333;
+       color: #fff;
+   }
+
     .section-working-body-content i {
         width: 90px;
         font-size: 36px;
+    }
+
+    .bg-header-nav ul {
+        width: 100vw;
+        padding: 0;
+    }
+
+    .bg-header-nav ul li {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        transition: none;
     }
 }
 

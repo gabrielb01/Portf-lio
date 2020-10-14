@@ -2,6 +2,7 @@
 let doc = document.documentElement;
 let display = 0;
 let arraySkills = [97, 90, 88, 92, 87, 82, 91, 72, 65, 61];
+let listItem = document.querySelectorAll(".list-item");
 
 
 let opcoes = {
@@ -13,9 +14,14 @@ let nanobar = new Nanobar(opcoes);
 nanobar.go(80);
 
 
-
+if (window.innerWidth <= "782" ) {
+    document.querySelector(".bg-header-nav").style.height = "0px";
+}
 
 window.onload = () => {
+
+
+    
 
 
     const onFocusInput = (classFocus, classAlt) => {
@@ -109,6 +115,13 @@ window.onload = () => {
             setSkills();
         }
 
+        if (doc.scrollTop < document.querySelector('.section-about').offsetTop) {
+            document.querySelector("#home-item").style.fontWeight = "bold";
+            document.querySelector("#home-item").style.opacity = "0.8";
+        } else {
+            document.querySelector("#home-item").style.fontWeight = "unset";
+            document.querySelector("#home-item").style.opacity = "1";
+        }
 
     }
 
@@ -134,6 +147,38 @@ window.onload = () => {
             alert("Este post é um conteúdo estático");
         });
     }
+
+    for (let j=0; j < listItem.length; j++) {
+        listItem[j].addEventListener('click', () => {
+            let top;
+            let className = ".section-"+listItem[j].getAttribute("data-section");
+
+            if (listItem[j].getAttribute("data-section")=="contact-form-title") {
+                className = "."+listItem[j].getAttribute("data-section");
+            }
+
+    
+            if (className == ".section-header") {
+                top =0;
+            } else {
+                top = (document.querySelector(className).offsetTop - 20);
+            }
+            window.scroll({
+                top: top , 
+                behavior:"smooth"
+            });
+            
+        });
+    }
+
+    document.querySelector(".cls").addEventListener("click", () => {
+        document.querySelector(".bg-header-nav").style.height = "0px";
+    });
+
+    document.querySelector(".fa-bars").addEventListener("click", () => {
+        document.querySelector(".bg-header-nav").style.height = "280px";
+        
+    });
 
     document.querySelector(".topbar").style.display = "none";
     document.getElementsByTagName('body')[0].style.overflowY = "visible";
