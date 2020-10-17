@@ -47,39 +47,22 @@ window.onload = () => {
     }
 
 
-    const msgDocumentAnimate = () => {
+    // const msgDocumentAnimate = () => {
 
-        setInterval(() => {
-            setTimeout(() => {
-                document.querySelector('.msg-content').style.transform = "rotate(-8deg)";
-                setTimeout(() => {
-                    document.querySelector('.msg-content').style.transform = "rotate(8deg)";
-                    setTimeout(() => {
-                        document.querySelector('.msg-content').style.transform = "rotate(0deg)";
-                    }, 250);
-                }, 250);
-            }, 250);
-        }, 2000);
-    }
-
-
+    //     setInterval(() => {
+    //         setTimeout(() => {
+    //             document.querySelector('.msg-content').style.transform = "rotate(-8deg)";
+    //             setTimeout(() => {
+    //                 document.querySelector('.msg-content').style.transform = "rotate(8deg)";
+    //                 setTimeout(() => {
+    //                     document.querySelector('.msg-content').style.transform = "rotate(0deg)";
+    //                 }, 250);
+    //             }, 250);
+    //         }, 250);
+    //     }, 2000);
+    // }
 
 
-
-    const point = () => {
-        setInterval(() => {
-            let p = ".";
-            document.querySelector(".point").innerHTML = p;
-            setTimeout(() => {
-                p += ".";
-                document.querySelector(".point").innerHTML = p;
-                setTimeout(() => {
-                    p += ".";
-                    document.querySelector(".point").innerHTML = p;
-                }, 1000);
-            }, 1000);
-        }, 3000);
-    }
 
     const setSkills = () => {
         for (let i = 0; i < arraySkills.length; i++) {
@@ -135,8 +118,7 @@ window.onload = () => {
     onFocusInput('mensagem-text', 'mensagem');
     onBlurInput('mensagem-text', 'mensagem');
 
-    msgDocumentAnimate();
-    point();
+    // msgDocumentAnimate();
 
 
     let cards = document.querySelectorAll('.section-blog-body-card');
