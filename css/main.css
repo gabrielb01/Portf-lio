@@ -168,7 +168,7 @@ body {
     font-family: tahoma;
     font-weight: 67%;
     font-size: 16px;
-    background-color:#fff;
+    background-color:#f9f9f9;
     border-bottom: 2px solid rgba(41, 41, 211, 0.788);
     transition: height .1s ease-out;
     overflow: hidden;
@@ -987,11 +987,16 @@ body {
 
 .section-contact-form-card-flex input[type="submit"] {
     border: none;
-    background-color: rgb(127, 187, 190);
+    background-color: rgb(68, 43, 205);
     color: #fff;
     font-size: 18px;
     padding: 15px;
     cursor: pointer;
+    transition: 1s ease ;
+}
+
+.section-contact-form-card-flex input[type="submit"]:hover {
+    background-color: rgba(68, 43, 205,0.6);
 }
  
 
